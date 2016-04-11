@@ -28,7 +28,7 @@ public class MooseGameGUI extends JFrame implements ActionListener{
       
       Border customBorder = new LineBorder(Color.WHITE, 8);
    
-      JLabel intro = new JLabel("                            Click two boxes. Try to match all the pictures.");
+      JLabel intro = new JLabel("                                         Click two boxes. Try to match all the pictures.");
       intro.setFont(new Font ("ComicSans", Font.PLAIN, 14));
       add(intro,BorderLayout.NORTH);
       add(new JLabel (filler), BorderLayout.EAST);
@@ -45,6 +45,7 @@ public class MooseGameGUI extends JFrame implements ActionListener{
          reset.setBorder(customBorder);
       resultslabel = new JLabel("Results:");
          resultslabel.setFont(new Font("ComicSans", Font.BOLD, 14));
+         resultslabel.setForeground(new Color(238,200,239));
       results = new TextArea(filler,1,10,TextArea.SCROLLBARS_NONE);
       results.setEditable(false);
       pResults.add(reset);
@@ -59,7 +60,7 @@ public class MooseGameGUI extends JFrame implements ActionListener{
       
       pPanels.setLayout(new GridLayout(4,4));
       for(int i=0;i<16;i++){
-         String panelNum = i+1+"";
+         String panelNum = "'u'";
          panels[i] = new JButton (panelNum);
          panels[i].setBackground(new Color(185,228,246));
          panels[i].setForeground(Color.WHITE);
@@ -71,7 +72,7 @@ public class MooseGameGUI extends JFrame implements ActionListener{
       }
       add (pPanels,BorderLayout.CENTER);
       
-      
+
       setVisible(true);
       
    }//public
